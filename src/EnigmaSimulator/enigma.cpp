@@ -138,6 +138,12 @@ int main(){
 			letra = tolower(letra);
 			continue;
 		}
+		if(letra == '\n'){
+			output.push_back('\n');
+			cin.get(letra);
+			letra = tolower(letra);
+			continue;
+		}
 		//roda antes de codificar
 		rotor->rodar();
 		char letra_codificada = codifica(rotor,painel,letra);
@@ -148,7 +154,7 @@ int main(){
 
 	}
 
-		cout << output;
+	cout << output;
 	
 
 	delete rotor;
